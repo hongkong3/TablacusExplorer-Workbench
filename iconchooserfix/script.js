@@ -1,4 +1,4 @@
-const Addon_Id = 'iconchooserfix', Addon_prm = await $.GetAddonElement(Addon_Id), C_LNG = await GetLangId();
+const Addon_Id = 'iconchooserfix', Addon_prm = await $.GetAddonElement(Addon_Id), lng = await GetLangId();
 
 if(window.Addon==1){
   AddEvent('BrowserCreatedEx', async function(){
@@ -46,12 +46,12 @@ if(window.Addon==1){
       p.type='text/css'; p.media='screen'; p.appendChild(D.createTextNode(css));
       D.body.appendChild(p); window.addEventListener('load', _iconGroup);
     }
-  }.toString().replace(/@@@/g, C_LNG).replace(/^[^{]+{\s*|\s*}$/g, ''));
+  }.toString().replace(/@@@/g, lng).replace(/^[^{]+{\s*|\s*}$/g, ''));
 } else {
   let s=function(){/**
-    <div class="full @@@"><form name="F"><table class="full options"><tr>
+    <div class="content @@@"><form name="F"><table class="full options"><tr>
       <td><span class="ja">レギュラーグループ:</span><span class="en">Regular Group:</span><textarea id="P" wrap="soft"></textarea></td>
-      <td><span class="ja">二軍グループ:</span><span class="en">Secibdary Group:</span><textarea id="D" wrap="soft"></textarea></td>
+      <td><span class="ja">二軍グループ:</span><span class="en">Secondary Group:</span><textarea id="D" wrap="soft"></textarea></td>
     </tr></table></form>
     <p class="info en">
       This add-on aims to improve the UX of the “Icon Select Dialog” for menus, buttons, etc.<br />
@@ -76,10 +76,10 @@ if(window.Addon==1){
       table.options td {width: 50%; padding: 0 .5em}
       table.options textarea {display: block; width: 100%; height: 38vh; resize: none; font-size: .9rem}
       p.info {padding: 1em; opacity: 0.6}
-      .full:not(.ja) .ja, .full.ja .en {display: none}
+      .content:not(.ja) .ja, .content.ja .en {display: none}
       footer {display: block; position: absolute; left: 0; bottom: 0; text-align: right; width: 100%; padding: .5em 1em}
     </style>
-  /**/}.toString().replace(/@@@/g, C_LNG).replace(/^[^\{]+\{[\s\S]*?\/\*+|\/?\*+\/[\s\S]*?\}$/g, '');
+  /**/}.toString().replace(/@@@/g, lng).replace(/^[^\{]+\{[\s\S]*?\/\*+|\/?\*+\/[\s\S]*?\}$/g, '');
   SetTabContents(0, '', s);
 
   IconTest=function(){ //テスト用「アイコン選択ダイアログ」
