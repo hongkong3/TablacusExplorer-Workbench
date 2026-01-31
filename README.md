@@ -29,7 +29,7 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 1. `オプション > アドオン` 画面内、🗑️(ゴミ箱)アイコンから削除できます。
 
 - - - - - - - -
-https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support"
+
 ## アドオン
 <!-- バージョン更新時の表記更新・DL先変更を忘れずに!! -->
 
