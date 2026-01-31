@@ -12,8 +12,8 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 <!-- TOC/ -->
 - [インストール方法](#インストール方法)
 - [アドオン](#アドオン)
+  - [操作設定 チートシート](#操作設定-チートシート)
   - [アイコン選択ダイアログ-改](#アイコン選択ダイアログ-改)
-
 <!-- /TOC -->
 - - - - - - - -
 
@@ -35,6 +35,16 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 ## アドオン
 <!-- バージョン更新時の表記更新・DL先変更を忘れずに!! -->
 
+### [操作設定 チートシート](/cheatsheet)
+[![TE 25.12.31](https://img.shields.io/static/v1?label=TablacusExplorer&message=25.12.31&color=fe7)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
+[![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=28c)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
+![Add-ons 1.17](https://img.shields.io/static/v1?label=Add-ons&message=1.17&color=f71 "Add-ons: 1.17")  
+DLファイル: [cheatsheet_v117.zip](/../../raw/master/.releases/cheatsheet_v117.zip)
+<br/>
+現在のキー・マウス（ジェスチャ）の操作設定を一覧形式で表示します。  
+<br/>
+<br/>
+
 ### [アイコン選択ダイアログ-改](/iconchooserfix)
 [![TE 25.12.31](https://img.shields.io/static/v1?label=TablacusExplorer&message=25.12.31&color=fe7)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
 [![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=28c)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
@@ -45,12 +55,3 @@ TE上の「アイコン選択」ダイアログのUXを多少マシにします�
 <br/>
 <br/>
 
-### [操作設定 チートシート](/cheatsheet)
-[![TE 25.12.31](https://img.shields.io/static/v1?label=TablacusExplorer&message=25.12.31&color=fe7)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
-[![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=28c)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
-![Add-ons 1.17](https://img.shields.io/static/v1?label=Add-ons&message=1.17&color=f71 "Add-ons: 1.17")  
-DLファイル: [cheatsheet_v117.zip](/../../raw/master/.releases/cheatsheet_v117.zip)
-<br/>
-現在のキー・マウス（ジェスチャ）の操作設定を一覧形式で表示します。  
-<br/>
-<br/>
