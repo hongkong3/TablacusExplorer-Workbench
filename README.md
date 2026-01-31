@@ -3,7 +3,7 @@
 Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.github.io/explorer.html "Tablacus Explorer \- アドオンで拡張できるタブ型ファイラー") の**非公式アドオン**を置いてます。  
 
 - アドオンのご利用は **自己責任** でお願いします
-- 動作確認は、非WebView2(Trident) 64ビット版(`TE64.exe, te64.dll`)で行ってます
+- 動作確認は、非WebView2(Trident) 64ビット版 (`TE64.exe, te64.dll`) で行っています
 
 各アドオンのZipファイルは [.releases](.releases/) からダウンロード可能です。  
 ご意見・ご感想・不具合報告などございましたら [Issue](/../../issues) へどうぞ🤓  
@@ -29,7 +29,17 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 1. `オプション > アドオン` 画面内、🗑️(ゴミ箱)アイコンから削除できます。
 
 - - - - - - - -
-
+https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support"
 ## アドオン
+<!-- バージョン更新時の表記更新・DL先変更を忘れずに!! -->
+
+### ■ [アイコン選択ダイアログ-改](/iconchooserfix)
+[![TE 25.12.31](https://img.shields.io/static/v1?label=TablacusExplorer&message=25.12.31&color=fe7)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
+[![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=28c)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
+![Add-ons 1.02](https://img.shields.io/static/v1?label=Add-ons&message=1.02&color=f71 "Add-ons: 1.02")&nbsp;
+[iconchooserfix_v102.zip](/../../raw/master/.releases/iconchooserfix_v102.zip)
+<br/>
+
+TE上の「アイコン選択」ダイアログのUXを少しマシにします。
 
 
