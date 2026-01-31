@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <lang author="HongKong" en="Japanese">日本語</lang>
+  <text s="CheatSheet">一覧表</text>
+  <text s="CheatSheet_Key">キー 一覧</text>
+  <text s="CheatSheet_Mouse">マウス 一覧</text>
+  <text s="&amp;Recently closed tabs">最近閉じたタブ(&amp;R)</text>
+  <text s="&amp;Inner Breadcrumbs Address Bar">Inner パンくずリストアドレスバー(&amp;A)</text>
+  <text s="&amp;Inner Filter Bar">Inner フィルターバー(&amp;F)</text>
+  <text s="&amp;Label">ラベル(&amp;L)</text>
+  <text s="&amp;Change the Time Stamp...">タイムスタンプの変更(&amp;T)</text>
+  <text s="&amp;Rename dialog plus...">名前の変更ダイアログ プラス(&amp;P)</text>
+  <text s="&amp;Find Files">ファイル検索(&amp;F)</text>
+  <text s="&amp;Switch to next pane">次のペインに切り替える(&amp;N)</text>
+  <text s="&amp;Switch to previous pane">前のペインに切り替える(&amp;P)</text>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TablacusExplorer>
+  <General>
+    <Version>1.17</Version>
+    <MinVersion>2023.9.13</MinVersion>
+    <pubDate>Wen, 28 Jan 2026 00:00:00 GMT</pubDate>
+    <Options>Common:1:1</Options>
+    <Level>2</Level>
+    <Creator>HongKong3</Creator>
+    <URL>https://github.com/hongkong3/TablacusExplorer-Workbench/</URL>
+    <License>CC0 License</License>
+  </General>
+  <en>
+    <Name>Controls Cheat Sheet</Name>
+    <Description>Display a list of current keyboard and mouse gesture settings.</Description>
+  </en>
+  <ja>
+    <Name>操作設定 チートシート</Name>
+    <Description>現在のキーボード・マウスジェスチャの操作設定を一覧形式で表示。</Description>
+  </ja>
+</TablacusExplorer>
