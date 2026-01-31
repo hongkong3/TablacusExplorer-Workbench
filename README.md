@@ -35,7 +35,7 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 ## アドオン
 <!-- バージョン更新時の表記更新・DL先変更を忘れずに!! -->
 
-### ■ [アイコン選択ダイアログ-改](/iconchooserfix)
+### [アイコン選択ダイアログ-改](/iconchooserfix)
 [![TE 25.12.31](https://img.shields.io/static/v1?label=TablacusExplorer&message=25.12.31&color=fe7)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
 [![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=28c)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
 ![Add-ons 1.02](https://img.shields.io/static/v1?label=Add-ons&message=1.02&color=f71 "Add-ons: 1.02")  
