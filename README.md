@@ -41,7 +41,7 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 ![Add-ons 1.17](https://img.shields.io/static/v1?label=Add-ons&message=1.17&color=3ab "Add-ons: 1.17")
 : [cheatsheet_v117.zip](/../../raw/master/.releases/cheatsheet_v117.zip)  
 <br/>
-現在のキー・マウス（ジェスチャ）の操作設定を一覧表示。  
+現在のキー・マウス（ジェスチャ）の設定を一覧表示。  
 <br/>
 <br/>
 
@@ -51,7 +51,7 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 ![Add-ons 1.02](https://img.shields.io/static/v1?label=Add-ons&message=1.02&color=3ab "Add-ons: 1.02")
 : [iconchooserfix_v102.zip](/../../raw/master/.releases/iconchooserfix_v102.zip)  
 <br/>
-TE上の「アイコン選択」ダイアログのUXを多少マシにします。  
+TE上の「アイコン選択」ダイアログを多少マシにします。  
 <br/>
 <br/>
 
