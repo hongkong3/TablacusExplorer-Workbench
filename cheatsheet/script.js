@@ -112,7 +112,7 @@ if (window.Addon == 1) { // # Addon-Execute
         <td><input type="text" id="cAddon" onchange="ChangeColor1(this)"> <input id="Color_cAddon" type="button" value=" " class="color" onclick="ChooseColor2(this)"></td>
       </tr><tr>
         <td><label><input type="checkbox" id="bRestore" /> <span class="en">Restore window position</span><span class="ja">ウィンドウ位置を復元</span></label></td>
-        <td><label><input type="checkbox" id="bInit" /> <span class="en">Autocomplete the "Name" of mouse gestures from Add-ons</span><span class="ja">アドオン固有マウスジェスチャの「名前」を補完</span></label></td>
+        <td><label><input type="checkbox" id="bInit" /> <span class="en">Autocomplete the "Name" of mouse gestures from Add-ons</span><span class="ja">起動時にアドオン固有マウスジェスチャの「名前」を補完</span></label></td>
       </tr><tr><td class="info en" colspan="2">
         Menus / Key / Mouse / "Tool bar" add-ons, etc.<br />&nbsp;* Type: "Add-ons"<br />&nbsp;* Options: "CheatSheet_Key" / "CheatSheet_Mouse"<br /> This allows each list to be displayed.<br /><br />
         Type: JScript, JavaScript and VBScript treats,<br />&nbsp;&nbsp;// Comment-Line within options as "Names".
