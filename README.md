@@ -36,9 +36,9 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 <!-- バージョン更新時の表記更新・DL先変更を忘れずに!! -->
 
 ### [操作設定 チートシート](/cheatsheet)
-[![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fe7)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
+[![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fc5)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
 [![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=28c)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
-![Add-ons 1.17](https://img.shields.io/static/v1?label=Add-ons&message=1.17&color=f71 "Add-ons: 1.17")
+![Add-ons 1.17](https://img.shields.io/static/v1?label=Add-ons&message=1.17&color=d32 "Add-ons: 1.17")
 : [cheatsheet_v117.zip](/../../raw/master/.releases/cheatsheet_v117.zip)  
 <br/>
 現在のキー・マウス（ジェスチャ）の操作設定を一覧形式で表示します。  
@@ -46,9 +46,9 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 <br/>
 
 ### [アイコン選択ダイアログ-改](/iconchooserfix)
-[![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fe7)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
+[![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fc5)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
 [![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=28c)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
-![Add-ons 1.02](https://img.shields.io/static/v1?label=Add-ons&message=1.02&color=f71 "Add-ons: 1.02")
+![Add-ons 1.02](https://img.shields.io/static/v1?label=Add-ons&message=1.02&color=d32 "Add-ons: 1.02")
 : [iconchooserfix_v102.zip](/../../raw/master/.releases/iconchooserfix_v102.zip)  
 <br/>
 TE上の「アイコン選択」ダイアログのUXを多少マシにします。  
