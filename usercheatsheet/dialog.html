@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="MSThemeCompatible" content="Yes">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../script/options.css">
+    <script type="text/javascript" charset="utf-8" src="../../script/consts.js"></script>
+    <style type="text/css" media="screen">
+      *, *::before, *::after {box-sizing: border-box; padding: 0; margin: 0}
+      body {overflow-y: auto} form{padding: 1rem; display: block; width: 100%} div.margin {padding: 5rem 0 0}
+      div.footer {position: fixed; left: 0; bottom: 0; width: 100%; text-align: center; vertical-align: middle; background-color: inherit; border-top: solid 1px rgba(120, 120, 124, 0.2); padding: .3rem}
+
+      table {width: 100%; border-collapse: collapse; border-spacing: 0; margin: 0 auto 3em}
+      table > caption {font-size: 1.4em; font-weight: 700; text-align: left; padding: .3em .5em; border: solid rgba(120,120,124,.2); border-width: 1px 1px 0; border-radius: .2em .2em 0 0; background-color: rgba(120,120,124,0.3)}
+      table > caption.title::before {content: '7'; margin-right: .4em; font-weight: 400; font-family: 'Wingdings'}
+      table.mouse > caption.title::before {content: '8'}
+      tr {border: solid rgba(120,120,124,.2); border-width: 0 1px} tr:last-child {border-width: 0 1px 1px}
+      tr:nth-child(2n+2) {background-color: rgba(120, 120, 124, 0.07)} tr:hover {background-color: rgba(0, 120, 232, 0.2)}
+
+      td {padding: .2em 1em; vertical-align: middle} td > kbd {display: inline-block; white-space: nowrap} td > kbd:not(:first-child){margin-top: .3em}
+      td > kbd.key {padding: .2em .5em; background-color: rgba(120,120,124,0.2); border: solid 1px rgba(248,248,255,0.05); border-radius: .2em}
+      s {text-decoration: none} kbd.mouse {padding: .2em 0}
+      .mouse .m {display: inline-block; position: relative; font-size: 1.0rem; width: .7em; height: 1em; margin: 0 .15em; border-radius: .2em; vertical-align: middle; box-shadow: inset 0 0 1px 1px currentColor}
+      .mouse .m4, .mouse .m5, .mouse .m8, .mouse .m9 {box-shadow: inset 0 0 1px currentColor; background-color: rgba(120, 120, 124, 0.3)}                     7
+      .mouse .m4, .mouse .m5 {margin: 0 .1em 0 .2em}
+      .mouse .m1::before, .mouse .m2::before, .mouse .m3::before, .mouse .m8::before, .mouse .m9::before {content: ''; display: inline-block; position: absolute; background-color: currentColor; border-radius: .2em 0 0 0; left: 0; top: 0; width: .3em; height: .45em}
+      .mouse .m2::before {left: auto; border-radius: 0 .2em 0 0; right: 0}
+      .mouse .m3::before, .mouse .m8::before, .mouse .m9::before {left: .3em; top: .2em; width: .1em; height: .3em; border-radius: 0}
+      .mouse .m4::after, .mouse .m5::after, .mouse .m8::after, .mouse .m9::after {content: ''; position: absolute; left: .15em; top: -.35em; width: 0; height: 0; border-style: solid; border-width: .3em .2em; border-color: transparent transparent currentColor transparent}
+      .mouse .m4::after {left: -.2em; top: -.0em; border-width: .2em .15em; border-color: transparent transparent currentColor currentColor}
+      .mouse .m5::after {left: -.2em; top: .5em; border-width: .2em .15em; border-color: currentColor transparent transparent currentColor}
+      .mouse .m9::after {top: .5em; border-color: currentColor transparent transparent transparent}
+      .mouse .arw {font-size: 1.0rem; font-family: 'Segoe MDL2 Assets'; display: inline-block; line-height: 1; margin: 0 .2em 0 0; width: 1em; height: 1em; vertical-align: middle}
+      .mouse .key {padding: .2em .5em; margin-right: .2em; background-color: rgba(120, 120, 124, 0.2); border-right: solid 1px rgba(248, 248, 255, 0.1); border-radius: .2em}
+      td.addon::after {content: ' *'} td.menu::after {content: ' ^'}
+    </style>
+  </head>
+  <body>
+    <form name="Q"></form>
+    <div class="margin bottom"></div>
+    <div class="footer"><input type="button" id="btnOK" value="OK" class="ok" /></div>
+    <script type="text/javascript">
+      document.body.style.visibility = "hidden"; ScriptBase = "../..";
+      LoadScript(["script/ui.js", "script/common.js"], function () {
+        LoadScripts(["script/sync.js"], [], function(){
+          var WC=window.chrome!=undefined, Addon_Id, Addon_Type;
+
+          Promise.all([dialogArguments.title, dialogArguments.content, dialogArguments.pos, dialogArguments.aid]).then(function(r){
+            document.title=r[0]; document.Q.innerHTML=r[1]; Addon_Id=r[3];
+
+            if(r[2]){ //ウィンドウ位置復元
+              var wp=r[2].split(',');
+              function _restorePos(){
+                Promise.all([api.FindWindow('TablacusExplorer2', document.title)]).then(function(r){
+                  if(r[0]){Promise.all([api.SetWindowPos(r[0], null, wp[0], wp[1], 0, 0, 1|4|16)]).then(function(){if(wp[4]==1){api.ShowWindow(r[0], SW_MAXIMIZE)}})}else{setTimeout(_restorePos, 50)}
+                });
+              }
+              setTimeout(_restorePos, 50);
+            }
+            Promise.all([RunEventUI("BrowserCreatedEx"), ApplyLang(document)]).then(function(){
+              Addon_Type=document.getElementsByClassName('mouse').length ? 1 : 0;
+              document.getElementById('btnOK').onclick=WebBrowser.OnClose=CloseCheatSheet;
+              document.body.style.visibility = ""; WebBrowser.Focus();
+            });
+          });
+
+          function CloseCheatSheet(WB){ //ウィンドウ位置記憶......アホぽい
+            Promise.all([api.FindWindow('TablacusExplorer2', document.title), api.Memory('RECT'), ReadTextFile('config/'+Addon_Id+'.dat')||'|']).then(function(r){
+              var hwnd=r[0], dat=r[2].split('|');
+              Promise.all([api.IsZoomed(hwnd), api.ShowWindow(hwnd, SW_RESTORE), api.RedrawWindow(hwnd, null, null, 0x100|0x400), api.Sleep(7)]).then(function(p){
+                Promise.all([api.GetWindowRect(hwnd, r[1])]).then(function(){
+                  Promise.all([r[1].Left, r[1].Top]).then(function(q){
+                    dat[Addon_Type]=[q[0], q[1], window.innerWidth, window.innerHeight, p[0] ? 1 : 0].join(',');
+                    Promise.all([WriteTextFile('config/'+Addon_Id+'.dat', dat.join('|'))]).then(function(){
+                      WebBrowser.Close();
+                    });
+                  });
+                });
+              });
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+

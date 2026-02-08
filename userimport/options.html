@@ -1,0 +1,36 @@
+<form>
+  <div id="UI_Form">
+    <label class="bold"><span class="en">Import Files</span><span class="ja">インポートファイル</span></label>
+    <table id="UI_Table" style="width: 100%"><tbody></tbody></table>
+    <div class="info ja">
+      TE.exe からの相対パス、または絶対パスで指定されたファイルを、TEウィンドウ生成時に埋め込みます。<br />
+      埋め込み用の要素には <code>"ファイル名_拡張子"</code>の id が付きます。
+      <table class="info">
+        <tr><td class="code nest">*.css</td><td><code>&lt;style type="text/css"&gt;</code> で埋め込み</td></tr>
+        <tr><td class="code nest">*.js</td><td><code>importScript();</code> で読み込み</td></tr>
+        <tr><td class="nest">(その他)</td><td><code>&lt;pre style="display: none"&gt;</code> で埋め込み</td></tr>
+      </table><br />
+      メモ欄は、ファイルの概要・用途などの覚え書き用。
+    </div>
+    <div class="info en">
+      Files specified by a relative-path from the `TE.exe`, or a full-path are embedded when the TE window is generated.<br />
+      Embedded tags are set the "id" at <code>"filename_extension"</code>.
+      <table class="info">
+        <tr><td class="code nest">*.css</td><td>Embedded in <code>&lt;style type="text/css"&gt;</code></tr></tr>
+        <tr><td class="code nest">*.js</td><td>Load by<code>importScript();</code></td></tr>
+        <tr><td class="nest">(others)</td><td>Embedded in <code>&lt;pre style="display: none"&gt;</code></td></tr>
+      </table><br />
+      "Notes" are for jotting down summaries, purposes, and other information about files.
+    </div>
+    <style type="text/css">
+      #UI_Form.lng_ja .en, #UI_Form:not(.lng_ja) .ja {display: none}
+      #UI_Form {padding: .6rem 1rem; height: 100%; line-height: 1.4}
+      #UI_Form > table {margin-bottom: 1em} #UI_Form td {white-space: nowrap; padding: .1em}
+      #UI_Form td:nth-child(2) {width: 62%} #UI_Form td:nth-child(6) {width: 38%}
+      #UI_Form td > input[type="text"] {width: 100%; padding: .2em .6em}
+      #UI_Form div.info {padding: 1em .8em; opacity: .6} #UI_Form td.nest {padding-left: 1.5em}
+      b, strong, .bold {font-weight: 700} kbd, pre, code, .code {font-family: 'BIZ UDGothic', monospace}
+    </style>
+  </div>
+</form>
+
