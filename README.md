@@ -12,7 +12,7 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 <!-- TOC/ -->
 - [インストール方法](#インストール方法)
 - [アドオン](#アドオン)
-  - [操作設定 チートシート](#操作設定-チートシート)
+  - [ユーザー チートシート](#ユーザー-チートシート)
   - [アイコン選択ダイアログ-改](#アイコン選択ダイアログ-改)
 <!-- /TOC -->
 - - - - - - - -
@@ -35,23 +35,23 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 ## アドオン
 <!-- バージョン更新時の表記更新・DL先変更を忘れずに!! -->
 
-### [操作設定 チートシート](/cheatsheet)
+### [ユーザー チートシート](/usercheatsheet)
 [![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fc5)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
 [![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=27e)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
-![Add-ons 1.17](https://img.shields.io/static/v1?label=Add-ons&message=1.17&color=3ab "Add-ons: 1.17")
-: [cheatsheet_v117.zip](/../../raw/master/.releases/cheatsheet_v117.zip)  
+![Add-ons 1.48](https://img.shields.io/static/v1?label=Add-ons&message=1.48&color=3ab "Add-ons: 1.48")
+: [usercheatsheet_v148.zip](/../../raw/master/.releases/usercheatsheet_v148.zip)  
 <br/>
-現在のキー・マウス（ジェスチャ）の設定を一覧表示。  
+現在のキーボード・マウスジェスチャの操作設定を一覧表示します。  
 <br/>
 <br/>
 
-### [アイコン選択ダイアログ-改](/iconchooserfix)
+### [アイコン選択ダイアログ-改](/chooseiconfix)
 [![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fc5)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
 [![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=27e)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
-![Add-ons 1.02](https://img.shields.io/static/v1?label=Add-ons&message=1.02&color=3ab "Add-ons: 1.02")
-: [iconchooserfix_v102.zip](/../../raw/master/.releases/iconchooserfix_v102.zip)  
+![Add-ons 1.06](https://img.shields.io/static/v1?label=Add-ons&message=1.06&color=3ab "Add-ons: 1.06")
+: [chooseiconfix_v106.zip](/../../raw/master/.releases/chooseiconfix_v106.zip)  
 <br/>
-TE上の「アイコン選択」ダイアログを多少マシにします。  
+「アイコン選択ダイアログ」のUI改修。  
 <br/>
 <br/>
 
