@@ -14,13 +14,8 @@ if (window.Addon == 1) { // # Addon-Exec
     Exec: async function(Type, Ctrl, pt){ // チートシート表示( "Key" / "Mouse", ...)
       if(!Addons[Addon_Name].Data[Type]){await Addons[Addon_Name].Normalize()}
 
-      var opt=await api.CreateObject('Object');
-      opt.MainWinow=$; opt.resize=true; opt.maximize=true; opt.minimize=true;
-      await Promise.all([
-        GetText(Type), GetText('CheatSheet'),
-        Addons[Addon_Name].Data['html'+Type],
-        ReadTextFile('config/'+Addon_Id+'.dat')||'|',
-      ]).then(function(r){
+      var opt=await api.CreateObject('Object'); opt.MainWinow=$;
+      await Promise.all([GetText(Type), GetText('CheatSheet'), Addons[Addon_Name].Data['html'+Type], ReadTextFile('config/'+Addon_Id+'.dat')||'|',]).then(function(r){
         opt.title=r[0]+' '+r[1]+' - '+TITLE; opt.content=r[2]; opt.aid=Addon_Id; opt.pos='';
         if(item.getAttribute('bRestore')=='1'){
           var wp=(opt.pos=r[3].split('|')[Type=='Mouse' ? 1 : 0]||'').split(',');
@@ -28,8 +23,8 @@ if (window.Addon == 1) { // # Addon-Exec
         }
       });
 
-      var hwnd=await api.FindWindow('TablacusExplorer2', opt.title);
-      if(hwnd){
+      var hwnd=await api.FindWindow('TablacusExplorer2', await opt.title);
+      if(hwnd){ //既存ウィンドウ
         if(await api.IsIconic(hwnd)){await api.ShowWindow(hwnd, SW_RESTORE)}
         await api.SetForegroundWindow(hwnd); return hwnd;
       }
@@ -221,5 +216,5 @@ if (window.Addon == 1) { // # Addon-Exec
       input:checked + .tglOrder::before {left: 50%} input:checked + .tglOrder::after {left: 0%} table.ja .tglOrder::before {content: '名前'} table.ja .tglOrder::after {content: '操作'}
     </style>
   /**/}.toString().replace(/^[^\{]+\{[\s\S]*?\/\*+|\/?\*+\/[\s\S]*?\}$/g, '').replace(/%lng%/g, lng);
-  SetTabContents(1, "View", htm);
+  SetTabContents(1, 'View', htm);
 }

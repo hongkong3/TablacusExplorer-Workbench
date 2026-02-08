@@ -43,21 +43,21 @@
       document.body.style.visibility = "hidden"; ScriptBase = "../..";
       LoadScript(["script/ui.js", "script/common.js"], function () {
         LoadScripts(["script/sync.js"], [], function(){
-          var WC=window.chrome!=undefined, Addon_Id, Addon_Type;
+          var WC=window.chrome!=undefined, Addon_Id, Addon_Type, hwnd=0;
 
           Promise.all([dialogArguments.title, dialogArguments.content, dialogArguments.pos, dialogArguments.aid]).then(function(r){
             document.title=r[0]; document.Q.innerHTML=r[1]; Addon_Id=r[3];
             if(!Addon_Id){document.body.style.visibility = ""; WebBrowser.Focus(); return false}
 
-            if(r[2]){ //ウィンドウ位置復元
-              var wp=r[2].split(',');
-              function _restorePos(){
-                Promise.all([api.FindWindow('TablacusExplorer2', document.title)]).then(function(r){
-                  if(r[0]){Promise.all([api.SetWindowPos(r[0], null, wp[0], wp[1], 0, 0, 1|4|16)]).then(function(){if(wp[4]==1){api.ShowWindow(r[0], SW_MAXIMIZE)}})}else{setTimeout(_restorePos, 50)}
+            Promise.all([api.FindWindow('TablacusExplorer2', document.title)]).then(function(q){
+              if((hwnd=q[0]) && r[2]){ //ウィンドウ位置復元
+                var wp=r[2].split(',');
+                Promise.all([api.SetWindowPos(hwnd, null, wp[0], wp[1], 0, 0, 1|4|16)]).then(function(){
+                  if(wp[4]==1){api.ShowWindow(hwnd, SW_MAXIMIZE)}
                 });
               }
-              setTimeout(_restorePos, 50);
-            }
+            });
+
             Promise.all([RunEventUI("BrowserCreatedEx"), ApplyLang(document)]).then(function(){
               Addon_Type=document.getElementsByClassName('mouse').length ? 1 : 0;
               document.getElementById('btnOK').onclick=WebBrowser.OnClose=CloseCheatSheet;
@@ -65,8 +65,8 @@
             });
           });
 
-          function CloseCheatSheet(WB){ //ウィンドウ位置記憶......アホぽい
-            Promise.all([api.FindWindow('TablacusExplorer2', document.title), api.Memory('RECT'), ReadTextFile('config/'+Addon_Id+'.dat')||'|']).then(function(r){
+          function CloseCheatSheet(WB){ //ウィンドウ位置記憶......アホっぽい
+            try{Promise.all([hwnd||api.FindWindow('TablacusExplorer2', document.title), api.Memory('RECT'), ReadTextFile('config/'+Addon_Id+'.dat')||'|']).then(function(r){
               var hwnd=r[0], dat=r[2].split('|');
               Promise.all([api.IsZoomed(hwnd), api.ShowWindow(hwnd, SW_RESTORE), api.RedrawWindow(hwnd, null, null, 0x100|0x400), api.Sleep(7)]).then(function(p){
                 Promise.all([api.GetWindowRect(hwnd, r[1])]).then(function(){
@@ -78,7 +78,7 @@
                   });
                 });
               });
-            });
+            })}catch(e){WebBrowser.Close()}
           }
         });
       });
