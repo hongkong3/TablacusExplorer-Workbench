@@ -13,6 +13,7 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 - [インストール方法](#インストール方法)
 - [アドオン](#アドオン)
   - [ユーザー チートシート](#ユーザー-チートシート)
+  - [ユーザーインポート](#ユーザーインポート)
   - [アイコン選択ダイアログ-改](#アイコン選択ダイアログ-改)
 <!-- /TOC -->
 - - - - - - - -
@@ -42,6 +43,18 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 : [usercheatsheet_v148.zip](/../../raw/master/.releases/usercheatsheet_v148.zip)  
 <br/>
 現在のキーボード・マウスジェスチャの操作設定を一覧表示します。  
+
+<br/>
+<br/>
+
+### [ユーザーインポート](/userimport)
+[![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fc5)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
+[![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=27e)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
+![Add-ons 1.27](https://img.shields.io/static/v1?label=Add-ons&message=1.27&color=3ab "Add-ons: 1.27")
+: [userimport_v127.zip](/../../raw/master/.releases/userimport_v127.zip)  
+<br/>
+TEウィンドウ生成時に指定ファイルを埋め込みます。  
+
 <br/>
 <br/>
 
@@ -52,6 +65,7 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 : [chooseiconfix_v106.zip](/../../raw/master/.releases/chooseiconfix_v106.zip)  
 <br/>
 「アイコン選択ダイアログ」のUI改修。  
+
 <br/>
 <br/>
 
