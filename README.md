@@ -3,7 +3,7 @@
 Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.github.io/explorer.html "Tablacus Explorer \- アドオンで拡張できるタブ型ファイラー") の**非公式アドオン**を置いてます。  
 
 - アドオンのご利用は **自己責任** でお願いします
-- 非WebView2（Trident）64ビット版（`TE64.exe, te64.dll`）で動作確認しています
+- 主に 非WebView2（Trident）64ビット版（`TE64.exe, te64.dll`）で動作確認しています
 
 各アドオンのZipファイルは [.releases](.releases/) からダウンロード可能です。  
 ご意見・ご感想・不具合報告などございましたら [Issue](/../../issues) へどうぞ🤓  
@@ -26,7 +26,7 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 1. `オプション > アドオン` 画面の一番下に、アドオンが *無効状態* で追加されてます。  
    チェックボックスで *有効化* して、「OK」ボタンで `オプション` 画面を閉じれば **インストール完了** です。  
    - `オプション > アドオン` 画面の⚙️(歯車)アイコンから、各アドオンの「オプション画面」を開けます。  
-   - アドオンのオプション画面内に *アドオンの使い方* を簡単に書いてます。  
+   - 各アドオンのオプション画面内に、簡単に使い方を書いてます。  
 
 ## アンインストール方法
 1. `オプション > アドオン` 画面内、🗑️(ゴミ箱)アイコンから削除できます。
@@ -43,7 +43,6 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 : [usercheatsheet_v148.zip](/../../raw/master/.releases/usercheatsheet_v148.zip)  
 <br/>
 現在のキーボード・マウスジェスチャの操作設定を一覧表示します。  
-
 <br/>
 <br/>
 
@@ -54,7 +53,9 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 : [userimport_v127.zip](/../../raw/master/.releases/userimport_v127.zip)  
 <br/>
 TEウィンドウ生成時に指定ファイルを埋め込みます。  
-
+  
+「ユーザースタイルシート」「セットアップ時に実行」などの類似品。  
+`*.css`, `*.js` などのファイルを複数登録可能、個別に無効化できます。  
 <br/>
 <br/>
 
@@ -65,7 +66,8 @@ TEウィンドウ生成時に指定ファイルを埋め込みます。
 : [chooseiconfix_v106.zip](/../../raw/master/.releases/chooseiconfix_v106.zip)  
 <br/>
 「アイコン選択ダイアログ」のUI改修。  
-
+  
+しっかりグループ分け、グループごとに開閉可能化。
 <br/>
 <br/>
 
