@@ -6,7 +6,6 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 - 主に 非WebView2（Trident）64ビット版（`TE64.exe, te64.dll`）で動作確認しています
 
 各アドオンのZipファイルは [.releases](.releases/) からダウンロード可能です。  
-ご意見・ご感想・不具合報告などございましたら [Issue](/../../issues) へどうぞ🤓  
 <br/>
 
 <!-- TOC/ -->
@@ -39,7 +38,8 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 ### [ユーザー チートシート](/usercheatsheet)
 [![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fc5)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
 [![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=27e)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
-![Add-ons 1.50](https://img.shields.io/static/v1?label=Add-ons&message=1.50&color=c23 "Add-ons: 1.50")
+![Add-ons 1.50](https://img.shields.io/static/v1?label=Add-ons&message=1.50&color=c23 "Add-ons: 1.50")  
+🗳️
 : [TE_usercheatsheet_v150.zip](/../../raw/master/.releases/TE_usercheatsheet_v150.zip)  
 <br/>
 現在のキーボード・マウスジェスチャの操作設定を一覧表示します。  
