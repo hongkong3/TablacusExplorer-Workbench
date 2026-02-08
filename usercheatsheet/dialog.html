@@ -47,6 +47,7 @@
 
           Promise.all([dialogArguments.title, dialogArguments.content, dialogArguments.pos, dialogArguments.aid]).then(function(r){
             document.title=r[0]; document.Q.innerHTML=r[1]; Addon_Id=r[3];
+            if(!Addon_Id){document.body.style.visibility = ""; WebBrowser.Focus(); return false}
 
             if(r[2]){ //ウィンドウ位置復元
               var wp=r[2].split(',');

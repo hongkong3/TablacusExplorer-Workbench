@@ -33,7 +33,7 @@ if (window.Addon == 1) { // # Addon-Exec
         if(await api.IsIconic(hwnd)){await api.ShowWindow(hwnd, SW_RESTORE)}
         await api.SetForegroundWindow(hwnd); return hwnd;
       }
-      return Sync[Addon_Name].ShowWindow(opt);
+      return ShowDialog('../addons/'+Addon_Id+'/dialog.html', opt);
     },
 
     Normalize: async function(){ // データ収集
@@ -190,7 +190,6 @@ if (window.Addon == 1) { // # Addon-Exec
   AddTypeEx("Add-ons", Addon_Name+'_Key', function(Ctrl, pt){Addons[Addon_Name].Exec('Key', Ctrl, pt)});
   AddTypeEx("Add-ons", Addon_Name+'_Mouse', function(Ctrl, pt){Addons[Addon_Name].Exec('Mouse', Ctrl, pt)});
 
-  $.importScript("addons\\" + Addon_Id + "\\sync.js");
 } else { // # Addon-Option
   var htm=function(){/**
     <table class="ucc %lng%">
