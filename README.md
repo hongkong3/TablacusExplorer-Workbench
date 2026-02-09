@@ -35,11 +35,13 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 ## アドオン
 <!-- バージョン更新時の表記更新・DL先変更を忘れずに!! -->
 
-### [ユーザー チートシート](/usercheatsheet) : [TE_usercheatsheet_v150.zip](/../../raw/master/.releases/TE_usercheatsheet_v150.zip)
-[![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fc5)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
-[![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=27e)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
-![Add-ons 1.50](https://img.shields.io/static/v1?label=Add-ons&message=1.50&color=c23&logo=folder "Add-ons: 1.50")  
-**📥**: [TE_usercheatsheet_v150.zip](/../../raw/master/.releases/TE_usercheatsheet_v150.zip)  
+### [ユーザー チートシート](/usercheatsheet)
+[![CC0 1.0Universal](https://img.shields.io/static/v1?color=2ab&label=license&message=CC0)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
+![Add-ons 1.50](https://img.shields.io/static/v1?color=d65&label=Add-ons&message=1.50 "Add-ons: 1.50")
+[<img height="24te" src="https://img.shields.io/static/v1?labelColor=fc5&color=27e&label=Download&message=TE_usercheatsheet_v150.zip"/>
+](/../../raw/master/.releases/TE_usercheatsheet_v150.zip "TE_usercheatsheet_v150.zip をダウンロード")  
+
+💾 : [TE_usercheatsheet_v150.zip](/../../raw/master/.releases/TE_usercheatsheet_v150.zip)  
 <br/>
 現在のキーボード・マウスジェスチャの操作設定を一覧表示します。  
 <br/>
@@ -48,8 +50,8 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 ### [ユーザーインポート](/userimport)
 [![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fc5)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
 [![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=27e)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
-![Add-ons 1.27](https://img.shields.io/static/v1?label=Add-ons&message=1.27&color=c23 "Add-ons: 1.27")
-: [TE_userimport_v127.zip](/../../raw/master/.releases/TE_userimport_v127.zip)  
+![Add-ons 1.27](https://img.shields.io/static/v1?label=Add-ons&message=1.27&color=c23 "Add-ons: 1.27")  
+💾 : [TE_userimport_v127.zip](/../../raw/master/.releases/TE_userimport_v127.zip)  
 <br/>
 TEウィンドウ生成時に指定ファイルを埋め込みます。  
   
@@ -61,8 +63,8 @@ TEウィンドウ生成時に指定ファイルを埋め込みます。
 ### [アイコン選択ダイアログ-改](/chooseiconfix)
 [![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fc5)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
 [![CC0 1.0Universal](https://img.shields.io/static/v1?label=license&message=CC0&color=27e)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
-![Add-ons 1.06](https://img.shields.io/static/v1?label=Add-ons&message=1.06&color=c23 "Add-ons: 1.06")
-: [TE_chooseiconfix_v106.zip](/../../raw/master/.releases/TE_chooseiconfix_v106.zip)  
+![Add-ons 1.06](https://img.shields.io/static/v1?label=Add-ons&message=1.06&color=c23 "Add-ons: 1.06")  
+💾 : [TE_chooseiconfix_v106.zip](/../../raw/master/.releases/TE_chooseiconfix_v106.zip)  
 <br/>
 「アイコン選択ダイアログ」のUI改修。  
   
