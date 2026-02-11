@@ -34,11 +34,14 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 
 ## アドオン
 <!-- バージョン更新時の表記更新・DL先変更を忘れずに!! -->
+[i-te]: https://img.shields.io/static/v1?color=fc5&label=TE&message=25.12.31
+[a-te]: https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support"
+[i-cc]: https://img.shields.io/static/v1?color=2ab&label=license&message=CC0
+[a-cc]: https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal"
 
 ### [ユーザー チートシート](/usercheatsheet)
-[![TE 25.12.31](https://img.shields.io/static/v1?color=fc5&label=TE&message=25.12.31)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
-[![CC0 1.0Universal](https://img.shields.io/static/v1?color=2ab&label=license&message=CC0)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
-[<img height="27te" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download&message=TE_usercheatsheet_v150.zip"/>
+[![x][i-te]][a-te]&nbsp;[![x][i-cc]][a-cc]&nbsp;
+[<img height="27fox" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download%20:&message=TE_usercheatsheet_v150.zip"/>
 ](/../../raw/master/.releases/TE_usercheatsheet_v150.zip "TE_usercheatsheet_v150.zip をダウンロード")  
 <br/>
 現在のキーボード・マウスジェスチャの操作設定を一覧表示します。  
@@ -46,9 +49,8 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 <br/>
 
 ### [ユーザーインポート](/userimport)
-[![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fc5)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
-[![CC0 1.0Universal](https://img.shields.io/static/v1?color=2ab&label=license&message=CC0)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
-[<img height="27te" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download&message=TE_userimport_v127.zip"/>
+[![x][i-te]][a-te]&nbsp;[![x][i-cc]][a-cc]&nbsp;
+[<img height="27fox" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download%20:&message=TE_userimport_v127.zip"/>
 ](/../../raw/master/.releases/TE_userimport_v127.zip "TE_userimport_v127.zip をダウンロード")  
 <br/>
 TEウィンドウ生成時に指定ファイルを埋め込みます。  
@@ -59,9 +61,8 @@ TEウィンドウ生成時に指定ファイルを埋め込みます。
 <br/>
 
 ### [アイコン選択ダイアログ-改](/chooseiconfix)
-[![TE 25.12.31](https://img.shields.io/static/v1?label=TE&message=25.12.31&color=fc5)](https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support")&nbsp;
-[![CC0 1.0Universal](https://img.shields.io/static/v1?color=2ab&label=license&message=CC0)](https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal")&nbsp;
-[<img height="27te" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download&message=TE_chooseiconfix_v106.zip"/>
+[![x][i-te]][a-te]&nbsp;[![x][i-cc]][a-cc]&nbsp;
+[<img height="27fox" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download%20:&message=TE_chooseiconfix_v106.zip"/>
 ](/../../raw/master/.releases/TE_chooseiconfix_v106.zip "TE_chooseiconfix_v106.zip をダウンロード")  
 <br/>
 「アイコン選択ダイアログ」のUI改修。  
