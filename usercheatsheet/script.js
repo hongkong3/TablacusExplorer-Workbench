@@ -85,20 +85,21 @@ if (window.Addon == 1) { // # Addon-Exec
         }
       }
 
-      xml = new DOMParser().parseFromString(await te.Data.xmlMenus.xml, 'application/xml'); d=xml.getElementsByTagName('Item'); // Menus
+      // xml = new DOMParser().parseFromString(await te.Data.xmlMenus.xml, 'application/xml'); d=xml.getElementsByTagName('Item'); // Menus
+      xml = await OpenXmlUI('menus.xml', false, true); d=xml.getElementsByTagName('Item'); // Menus
       for(var i=0; i<d.length; i++){
         var pi=d[i], mn=_GA(pi, 'Name'), mk, mt=_GA(pi, 'Type'), mo=pi.text||pi.textContent;
-        if(mn.match(/^\s*(\S.*?)\s*(?:\t|\\t)\s*(\S.*?)\s*$/i)){
+        if(mn.match(/^\s*(\S.*?)\s*(?:\t|\\t)\s*(\S.*?)\s*$/i)){ // `Name="NAME\tKEY"`
           mn=RegExp.$1; mk=RegExp.$2; mk=mk.split(/\s*,\s*/);
           for(var ki=0; ki<mk.length; ki++){mk[ki]=await _KEY(mk[ki])}
           mn=await GetText(mn); pi=await GetText(pi.parentNode.tagName); mn=pi+' > '+mn;
-          cck[4].item.push([mt, mo, mn, mk, 4]);
-        }else{
-          //Blinkでメニュー書き換え手間なので, メニュー表示補正ナシ？
-        }
+          // cck[4].item.push([mt, mo, mn, mk, 4]);
+          cck[1].item.push([mt, mo, mn, mk, 4]);
+        }else{} //Blinkでメニュー書き換え手間なので, メニュー表示補正ナシ？
       }
 
       for(var ci=0, dc=[]; ci<cck.length; ci++){ // Key conflict
+        // var c=cck[ci]; dc[ci]=ci==4 ? dc[0].concat(dc[1]) : ci? dc[0].slice(0) : [];
         var c=cck[ci]; dc[ci]=ci? dc[0].slice(0) : [];
         for(var i=0; i<c.item.length; i++){
           for(var j=0; j<c.item[i][3].length; j++){
@@ -108,6 +109,7 @@ if (window.Addon == 1) { // # Addon-Exec
             }else if(c.cnf.indexOf(k)<0){
               c.cnf.push(k);
               if(ci && cck[0].cnf.indexOf(k)<0){cck[0].cnf.push(k)}
+              // if(ci==4 && cck[1].cnf.indexOf(k)<0){cck[1].cnf.push(k)}
             }
           }
         }
@@ -120,8 +122,7 @@ if (window.Addon == 1) { // # Addon-Exec
             if(dc[ci].indexOf(m)<0){
               dc[ci].push(m);
             }else if(c.cnf.indexOf(m)<0){
-              c.cnf.push(m);
-              if(ci && ccm[0].cnf.indexOf(m)<0){ccm[0].cnf.push(m)}
+              c.cnf.push(m); if(ci && ccm[0].cnf.indexOf(m)<0){ccm[0].cnf.push(m)}
             }
           }
         }
@@ -151,7 +152,7 @@ if (window.Addon == 1) { // # Addon-Exec
           var p=c.item[j], tr=tbl.appendChild(_CE('tr')), e, t;
           if(!p[2] && /Script$/i.test(p[0]) && p[1].match(/^\s*\/\/+\s*(\S.*?)\s*$/m)){p[2]=RegExp.$1}
           t=p[2] ? p[2] : p[0]+'</label>: <label>'+p[1];
-          e=tr.appendChild(_CE('td', (p[4]&8 ? 'addon' : p[4]&4 ? 'menu' : ''), t));
+          e=tr.appendChild(_CE('td', (p[4]&8 ? 'addon' : p[4]&4 ? 'menus' : ''), t));
           e=tr.insertBefore(_CE('td'), OD ? e : null);
 
           for(var h=0, cb; h<p[3].length; h++){
@@ -174,7 +175,7 @@ if (window.Addon == 1) { // # Addon-Exec
         if(c.item.length){root.appendChild(tbl)}
       }
       var c=_CE('style', 'css_colored', '', {type: 'text/css'}), s=''; //着色用
-      s='td.addon, td.menu {color: '+(_GA(item, 'bAddon')=='1' ? _GA(item, 'cAddon') : 'currentColor')+'}';
+      s='td.addon, td.menus {color: '+(_GA(item, 'bAddon')=='1' ? _GA(item, 'cAddon') : 'currentColor')+'}';
       s+='kbd.conflict {color: '+(_GA(item, 'bConflict')=='1' ? _GA(item, 'cConflict') : 'currentColor')+'}';
       c.textContent=s; root.insertBefore(c, root.firstChild);
 
@@ -201,10 +202,12 @@ if (window.Addon == 1) { // # Addon-Exec
         <td colspan="2"><label><input type="checkbox" id="bRestore" /> <span class="en">Restore display position</span><span class="ja">表示位置を復元</span></label></td>
       </tr><tr><td class="info en" colspan="2">
         Menus / Key / Mouse / "Tool bar" add-ons, etc.<br />&nbsp;* Type: "Add-ons"<br />&nbsp;* Options: "UserCheatSheet_Key" / "UserCheatSheet_Mouse"<br /> This allows each list to be displayed.<br /><br />
-        Type: JScript, JavaScript and VBScript treats,<br />&nbsp;&nbsp;// Comment-Line within options as "Names".
+        Type: JScript, JavaScript and VBScript treats,<br />&nbsp;&nbsp;// Comment-Line within options as "Names".<br /><br />
+        [Note] Keys set in the Menu-Item, will be enabled as a "List".
       </tr><tr><td class="info ja" colspan="2">
         メニュー / キー / マウス / 「ツールバー」アドオン等で<br />&nbsp;* タイプ: 「アドオン」<br />&nbsp;* オプション: 「キー 一覧」 / 「マウス 一覧」<br />と指定する事で、一覧を表示出来るようになります。<br /><br />
-        タイプ: JScript / JavaScript / VBScript では、オプション 内の<br />&nbsp;&nbsp;// コメント行を「名前」として扱います。
+        タイプ: JScript / JavaScript / VBScript では、オプション 内の<br />&nbsp;&nbsp;// コメント行を「名前」として扱います。<br /><br />
+        ※ メニュー項目内で設定した「キー」は、「一覧」のキーとして有効になります。
       </td></tr>
     </table>
     <style type="text/css" media="screen">

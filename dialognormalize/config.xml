@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TablacusExplorer>
   <General>
-    <Version>1.52</Version>
+    <Version>0.93</Version>
     <MinVersion>2023.9.13</MinVersion>
     <pubDate>Mon, 9 Feb 2026 00:00:00 GMT</pubDate>
-    <Options>Common:1:1</Options>
+    <Options>Common:0:0</Options>
     <Level>2</Level>
     <Creator>HongKong3</Creator>
     <URL>https://github.com/hongkong3/TablacusExplorer-Workbench/</URL>
     <License>CC0 License</License>
   </General>
   <en>
-    <Name>User Cheat Sheet</Name>
-    <Description>Display a list of current keyboard and mouse gesture settings.</Description>
+    <Name>Dialog window normalize</Name>
+    <Description>Make the TE-Window look like the Dialog.</Description>
   </en>
   <ja>
-    <Name>ユーザー チートシート</Name>
-    <Description>現在のキーボード・マウスジェスチャの操作設定を一覧表示します。</Description>
+    <Name>ダイアログ正規化</Name>
+    <Description>指定のTEウィンドウの外観をダイアログっぽくします。</Description>
   </ja>
 </TablacusExplorer>

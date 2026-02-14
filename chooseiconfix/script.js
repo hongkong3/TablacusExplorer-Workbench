@@ -64,10 +64,10 @@ if(window.Addon==1){ // # Addon-Exec
     <p class="info en">
       This add-on aims to improve the UX of the "Icon Select Dialog" for menus, buttons, etc.<br />
       Specifically, it enables constant display of icon group names & makes icon groups collapsible.<br /><br />
-      Additionally, entering a “Group Name” in the settings field will reorder the icon groups.<br />
+      Additionally, entering a "Group Name" in the settings field will reorder the icon groups.<br />
       * Regular Group: Positioned above standard groups, initially expanded<br />
       * Secondary Group: Positioned below standard groups<br />
-      Enter one group name per line, `/regular expression/` specification is also possible.
+      Enter one group name per line, <code>/regular expression/</code> specification is also possible.
     </p>
     <p class="info ja">
       メニュー・ボタン等の「アイコン選択ダイアログ」のUX改修を目指したアドオンです。<br />
@@ -90,7 +90,7 @@ if(window.Addon==1){ // # Addon-Exec
     </style>
   /**/}.toString().replace(/%lang%/g, await GetLangId()).replace(/^[^\{]+\{[\s\S]*?\/\*+|\/?\*+\/[\s\S]*?\}$/g, '');
 
-  await SetTabContents(0, '', s);
+  await SetTabContents(0, 'General', s);
 
   if(1){ // load Settings (becose not restore linefeeds in textarea...)
     const aPrm=await $.GetAddonElement(Addon_Id);

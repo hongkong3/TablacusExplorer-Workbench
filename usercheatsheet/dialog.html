@@ -8,10 +8,24 @@
     <style type="text/css" media="screen">
       *, *::before, *::after {box-sizing: border-box; padding: 0; margin: 0}
       body {overflow-y: auto} form{padding: 1rem; display: block; width: 100%} div.margin {padding: 5rem 0 0}
-      div.footer {position: fixed; left: 0; bottom: 0; width: 100%; text-align: center; vertical-align: middle; background-color: inherit; border-top: solid 1px rgba(120, 120, 124, 0.2); padding: .3rem}
+      div.footer {position: fixed; left: 0; bottom: 0; width: 100%; text-align: center; vertical-align: middle; background-color: inherit; border-top: solid 1px rgba(120, 120, 124, 0.2); padding: .3rem; z-index: 5}
 
       table {width: 100%; border-collapse: collapse; border-spacing: 0; margin: 0 auto 3em}
-      table > caption {font-size: 1.4em; font-weight: 700; text-align: left; padding: .3em .5em; border: solid rgba(120,120,124,.2); border-width: 1px 1px 0; border-radius: .2em .2em 0 0; background-color: rgba(120,120,124,0.3)}
+      table > caption {
+        color: #ddd;
+        background-color: #444;
+        text-shadow: 0 0 1px #222;
+        font-size: 1.4em;
+        font-weight: 700;
+        text-align: left;
+        padding: .3em .5em;
+        border: solid rgba(120,120,124,.2);
+        border-width: 1px 1px 0;
+        border-radius: .2em .2em 0 0;
+        top: 0;
+        position: sticky;
+        z-index: 3;
+      }
       table > caption.title::before {content: '7'; margin-right: .4em; font-weight: 400; font-family: 'Wingdings'}
       table.mouse > caption.title::before {content: '8'}
       tr {border: solid rgba(120,120,124,.2); border-width: 0 1px} tr:last-child {border-width: 0 1px 1px}
@@ -32,7 +46,7 @@
       .mouse .m9::after {top: .5em; border-color: currentColor transparent transparent transparent}
       .mouse .arw {font-size: 1.0rem; font-family: 'Segoe MDL2 Assets'; display: inline-block; line-height: 1; margin: 0 .2em 0 0; width: 1em; height: 1em; vertical-align: middle}
       .mouse .key {padding: .2em .5em; margin-right: .2em; background-color: rgba(120, 120, 124, 0.2); border-right: solid 1px rgba(248, 248, 255, 0.1); border-radius: .2em}
-      td.addon::after {content: ' *'} td.menu::after {content: ' ^'}
+      td.addon::after {content: ' *'} td.menus::after {content: ' ^'}
     </style>
   </head>
   <body>
@@ -49,14 +63,16 @@
             document.title=r[0]; document.Q.innerHTML=r[1]; Addon_Id=r[3];
             if(!Addon_Id){document.body.style.visibility = ""; WebBrowser.Focus(); return false}
 
-            Promise.all([api.FindWindow('TablacusExplorer2', document.title)]).then(function(q){
-              if((hwnd=q[0]) && r[2]){ //ウィンドウ位置復元
-                var wp=r[2].split(',');
-                Promise.all([api.SetWindowPos(hwnd, null, wp[0], wp[1], 0, 0, 1|4|16)]).then(function(){
-                  if(wp[4]==1){api.ShowWindow(hwnd, SW_MAXIMIZE)}
-                });
-              }
-            });
+            setTimeout(function(){ //document.title反映に遅延実行
+              Promise.all([api.FindWindow('TablacusExplorer2', document.title)]).then(function(q){
+                if((hwnd=q[0]) && r[2]){ //ウィンドウ位置復元
+                  var wp=r[2].split(',');
+                  Promise.all([api.SetWindowPos(hwnd, null, wp[0], wp[1], 0, 0, 1|4|16)]).then(function(){
+                    if(wp[4]==1){api.ShowWindow(hwnd, SW_MAXIMIZE)}
+                  });
+                }
+              });
+            }, 15);
 
             Promise.all([RunEventUI("BrowserCreatedEx"), ApplyLang(document)]).then(function(){
               Addon_Type=document.getElementsByClassName('mouse').length ? 1 : 0;
