@@ -41,8 +41,8 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 
 ### [ユーザー チートシート](/usercheatsheet)
 [![x][i-te]][a-te]&nbsp;[![x][i-cc]][a-cc]&nbsp;
-[<img height="27fox" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download%20:&message=TE_usercheatsheet_v150.zip"/>
-](/../../raw/master/.releases/TE_usercheatsheet_v150.zip "TE_usercheatsheet_v150.zip をダウンロード")  
+[<img height="27fox" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download%20:&message=TE_usercheatsheet_v152.zip"/>
+](/../../raw/master/.releases/TE_usercheatsheet_v152.zip "TE_usercheatsheet_v152.zip をダウンロード")  
 <br/>
 現在のキーボード・マウスジェスチャの操作設定を一覧表示します。  
 <br/>
