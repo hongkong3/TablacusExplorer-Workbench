@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TablacusExplorer>
+  <General>
+    <Version>0.94</Version>
+    <MinVersion>2023.9.13</MinVersion>
+    <pubDate>Wed, 11 Feb 2026 00:00:00 GMT</pubDate>
+    <Options>Common:0,6:0</Options>
+    <Level>2</Level>
+    <Creator>HongKong3</Creator>
+    <URL>https://github.com/hongkong3/TablacusExplorer-Workbench/</URL>
+    <License>CC0 License</License>
+  </General>
+  <en>
+    <Name>Debug Console</Name>
+    <Description>Make Debug Window for Trident version TE.</Description>
+  </en>
+  <ja>
+    <Name>デバッグコンソール</Name>
+    <Description>デバッグ用のコンソールもどきを設置 (Trident用)</Description>
+  </ja>
+</TablacusExplorer>
