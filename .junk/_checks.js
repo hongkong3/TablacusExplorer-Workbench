@@ -19,7 +19,7 @@ _check***系は実行後, `window.$p` に対象代入
 (function(){
   window.log=window.log ? log : window.chrome ? console.log : window.alert;
 
-  window._promise = window._pa = function(){ //[Blink]: {Promise}/Proxy(Function) 実体確認用
+  window._promise = window._p = function(){ //[Blink]: {Promise}/Proxy(Function) 実体確認用
     Promise.all(arguments).then(window.log); return '';
   };
 
