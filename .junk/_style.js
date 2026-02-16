@@ -1,4 +1,9 @@
-﻿/** CSSによるUI装飾用のclass仕込みスクリプト - 260212
+﻿/** CSSによるUI装飾用のclass仕込みスクリプト - 260216
+
+## body
+  `document.body`
+  - .wb_blink
+    WebView2(Blink)版ならクラス付与
 
 ## ペイン (分割画面, TabControl)
   `div#Panel > table.layout.fixed[id^="Panel_"]`
@@ -13,6 +18,18 @@
   `input[type="text"][name^="filter"]`
   - .filtered
     フィルターが有効ならクラス付与, 色変えて目立たせたり
+
+## ボタン
+  `.button`, `.hoverbutton`, `.activebutton`
+  - ._button
+    状態に依存しない共通クラス付与
+    標準CSSでは :hover, :active でなくクラス自体書き換えてスタイル当てられてる
+
+## メニュー
+  `.menu`, `.hovermenu`, `.activemenu`
+  - ._menu
+    ボタン同様, 状態に依存しない共通クラス付与
+    ...tab, tab2, activetab はクラス丸ごと書き換えなので無理, `ul.tab0 > li` とかで
 
 ## チェックボックス/ラジオ
   `input[type="checkbox"].chkBase` + `span.chkCheck`, `input[type="radio"].chkBase` + `span.chkRadio`
@@ -46,6 +63,14 @@
     for(var i=af.length; i--;){af[i].classList[/[^\*]/.test(af[i].value) ? 'add' : 'remove']('filtered')}
   }
 
+  function _classButtonMenu(){
+    var ac=document.querySelectorAll('.button:not(._button), .hoverbutton:not(._button), .activebutton:not(._button)');
+    for(var i=ac.length; i--;){ac[i].classList.add('_button')}
+    var bc=document.querySelectorAll('.menu:not(._menu), .hovermenu:not(._menu), .activemenu:not(._menu)');
+    for(var i=bc.length; i--;){bc[i].classList.add('_menu')}
+    if(ac.length|bc.length){setTimeout(_classButtonMenu, 150)}
+  }
+
   function _classCheckRadio(){ // 装飾用にチェック/ラジオのDOM構造改変: .chkBase .chkCheck/.chkRadio (.btnChkSet)
     var ac=document.querySelectorAll('input[type="checkbox"]:not(.chkBase), input[type="radio"]:not(.chkBase)');
     for(var i=ac.length; i--;){
@@ -76,16 +101,15 @@
 
   AddEvent("Load", function(){ // ev:起動後
     _classFilter();
+    if($.chrome){setTimeout(function(){document.body.classList.add('wb_blink')}, 30)}
+    setTimeout(_classCheckRadio, 30); setTimeout(_classButtonMenu, 30);
   });
 
   AddEvent("BrowserCreatedEx", async function(){ // ev:TEウィンドウ生成後
     if($.chrome){setTimeout(function(){document.body.classList.add('wb_blink')}, 100)}
-    _classCheckRadio(); setTimeout(_classCheckRadio, 100);
   }.toString().replace(/^([\s\S]+)$/, '($1)();'));
 
-  // TE本体だけは "BrowserCreatedEx" 経過(というかコレ)なので直接実行
-  if($.chrome){setTimeout(function(){document.body.classList.add('wb_blink')}, 100)}
-  setTimeout(_classCheckRadio, 100);
-
+  _classCheckRadio(); setTimeout(_classCheckRadio, 500);
+  _classButtonMenu(); setTimeout(_classButtonMenu, 500);
 })();
 
