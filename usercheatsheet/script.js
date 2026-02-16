@@ -116,6 +116,7 @@ if (window.Addon == 1) { // # Addon-Exec
       }
       for(var ci=0, dc=[]; ci<ccm.length; ci++){ // Mouse conflict
         var c=ccm[ci]; dc[ci]=ci? dc[0].slice(0) : [];
+        if(ci==2){dc[ci]=dc[ci].concat(dc[1])} if(ci==5){dc[ci]=dc[ci].concat(dc[4])}
         for(var i=0; i<c.item.length; i++){
           for(var j=0; j<c.item[i][3].length; j++){
             var m=c.item[i][3][j];
@@ -123,6 +124,8 @@ if (window.Addon == 1) { // # Addon-Exec
               dc[ci].push(m);
             }else if(c.cnf.indexOf(m)<0){
               c.cnf.push(m); if(ci && ccm[0].cnf.indexOf(m)<0){ccm[0].cnf.push(m)}
+              if(ci==2 && ccm[1].cnf.indexOf(m)<0){ccm[1].cnf.push(m)} //[List]
+              if(ci==5 && ccm[4].cnf.indexOf(m)<0){ccm[4].cnf.push(m)} //[Tabs]
             }
           }
         }

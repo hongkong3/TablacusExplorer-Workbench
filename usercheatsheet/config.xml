@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TablacusExplorer>
   <General>
-    <Version>1.52</Version>
+    <Version>1.53</Version>
     <MinVersion>2023.9.13</MinVersion>
-    <pubDate>Mon, 9 Feb 2026 00:00:00 GMT</pubDate>
+    <pubDate>Mon, 16 Feb 2026 00:00:00 GMT</pubDate>
     <Options>Common:1:1</Options>
     <Level>2</Level>
     <Creator>HongKong3</Creator>
@@ -17,5 +17,8 @@
   <ja>
     <Name>ユーザー チートシート</Name>
     <Description>現在のキーボード・マウスジェスチャの操作設定を一覧表示します。</Description>
+    <!--
+      1.53: List/List_Background, Tabs/Tabs_Background で共通のマウス操作を重複とみなすように
+    -->
   </ja>
 </TablacusExplorer>
