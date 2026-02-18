@@ -1,7 +1,4 @@
-﻿/** 開発用: 確認関数 - 260215 *****************
-
-- _promise(p0, p1,...), _p(p0, p1,...);
-  DevToolsでの {Promise}/Proxy(Function) 値確認用
+﻿/** 開発用: 確認関数 - 260217 *****************
 
 - _checkTCC();
   全TabControlの情報を出力
@@ -12,16 +9,12 @@
 - _checkFV([ FV | FV.Id ]);
   カレント/指定FVの情報を出力
 
-_check***系は実行後, `window.$p` に対象代入
+実行後, `window.$p` に対象代入
 
 **********************************************/
 
 (function(){
   window.log=window.log ? log : window.chrome ? console.log : window.alert;
-
-  window._promise = window._p = function(){ //[Blink]: {Promise}/Proxy(Function) 実体確認用
-    Promise.all(arguments).then(window.log); return '';
-  };
 
   window._checkTCC = function(){ //全TCちぇっく ()
     (async function(){
