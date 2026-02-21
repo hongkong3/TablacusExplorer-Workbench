@@ -1,4 +1,4 @@
-﻿/** CSSによるUI装飾用のclass仕込みスクリプト - 260216
+﻿/** CSSによるUI装飾用のclass仕込みスクリプト - 260222
 
 ## body
   `document.body`
@@ -75,9 +75,13 @@
     var ac=document.querySelectorAll('input[type="checkbox"]:not(.chkBase), input[type="radio"]:not(.chkBase)');
     for(var i=ac.length; i--;){
       var c=ac[i], cs=getComputedStyle(c), l;
-      c.parentNode.insertBefore((l=_CE('label')), c).appendChild(c).classList.add('chkBase');
-      if(cs.display=='none' || cs.visibility=='hidden'){continue}
-      l.appendChild(_CE('span', c.type=='radio' ? 'chkRadio' : 'chkCheck'));
+      c.classList.add('chkBase'); if(cs.display=='none' || cs.visibility=='hidden'){continue}
+      if(c.parentNode.localName=='label'){
+        l=c.parentNode;
+      }else{
+        c.parentNode.insertBefore((l=_CE('label')), c).appendChild(c);
+      }
+      l.insertBefore(_CE('span', c.type=='radio' ? 'chkRadio' : 'chkCheck'), c.nextSibling);
 
       // アドオン一覧等では, なぜか切り替え毎に作り直しなので...
       if(/^_\w+|^enable_/.test(c.id)){c.addEventListener('change', function(){setTimeout(_classCheckRadio, 50)})}
