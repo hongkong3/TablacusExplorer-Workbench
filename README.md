@@ -12,6 +12,8 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 > - [ユーザー チートシート](#ユーザー-チートシート)
 > - [ユーザーインポート](#ユーザーインポート)
 > - [アイコン選択ダイアログ-改](#アイコン選択ダイアログ-改)
+> - [ダイアログ正規化](#ダイアログ正規化)
+> - [デバッグコンソール](#デバッグコンソール)
 <!-- /TOC -->
 
 <table><tr><td>
@@ -70,7 +72,7 @@ TEウィンドウ生成時に指定ファイルを埋め込みます。
 ](/../../raw/master/.releases/TE_chooseiconfix_v106.zip "TE_chooseiconfix_v106.zip をダウンロード")  
 <br/>
 「アイコン選択ダイアログ」のUI改修。  
-しっかりグループ分け、グループごとに開閉可能。
+しっかりグループ分け、グループごとに開閉可能。  
 <br/>
 <br/>
 
@@ -90,5 +92,5 @@ TEウィンドウ生成時に指定ファイルを埋め込みます。
 [<img height="27fox" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download%20:&message=TE_debugconsole_v094.zip.zip"/>
 ](/../../raw/master/.releases/TE_debugconsole_v094.zip "TE_debugconsole_v094.zip をダウンロード")  
 <br/>
-デバッグ用のコンソールもどきを設置、非WebView2(Trident)用。
+デバッグ用のコンソールもどきを設置、非WebView2(Trident)用。  
 <br/>
