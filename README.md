@@ -72,6 +72,23 @@ TEウィンドウ生成時に指定ファイルを埋め込みます。
 「アイコン選択ダイアログ」のUI改修。  
 しっかりグループ分け、グループごとに開閉可能。
 <br/>
-
 <br/>
 
+### [ダイアログ正規化](/dialognormalize)
+[![x][i-te]][a-te]&nbsp;[![x][i-cc]][a-cc]&nbsp;
+[<img height="27fox" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download%20:&message=TE_dialognormalize_v093.zip"/>
+](/../../raw/master/.releases/TE_dialognormalize_v093.zip "TE_dialognormalize_v093.zip をダウンロード")  
+<br/>
+指定のTEウィンドウの外観をダイアログっぽくします。  
+具体的には、最小化/最大化ボタンの削除・ウィンドウサイズ固定化です。  
+**実用性はありません。**  
+<br/>
+<br/>
+
+### [デバッグコンソール](/debugconsole)
+[![x][i-te]][a-te]&nbsp;[![x][i-cc]][a-cc]&nbsp;
+[<img height="27fox" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download%20:&message=TE_debugconsole_v094.zip.zip"/>
+](/../../raw/master/.releases/TE_debugconsole_v094.zip "TE_debugconsole_v094.zip をダウンロード")  
+<br/>
+デバッグ用のコンソールもどきを設置、非WebView2(Trident)用。
+<br/>
