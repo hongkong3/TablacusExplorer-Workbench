@@ -89,7 +89,7 @@ TEウィンドウ生成時に指定ファイルを埋め込みます。
 
 ### [デバッグコンソール](/debugconsole)
 [![x][i-te]][a-te]&nbsp;[![x][i-cc]][a-cc]&nbsp;
-[<img height="27fox" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download%20:&message=TE_debugconsole_v094.zip.zip"/>
+[<img height="27fox" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download%20:&message=TE_debugconsole_v094.zip"/>
 ](/../../raw/master/.releases/TE_debugconsole_v094.zip "TE_debugconsole_v094.zip をダウンロード")  
 <br/>
 デバッグ用のコンソールもどきを設置、非WebView2(Trident)用。  
