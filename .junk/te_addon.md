@@ -71,8 +71,10 @@
 const Addon_Id = "myaddonname";         // アドオンフォルダ名
 const Addon_Name = "MyAddonName";       // 登録用のアドオン名
 
+const Default = "ToolBar2Right";        // オプション:位置 でのデフォルト位置指定
+
 const item = GetAddonElement(Addon_Id); // オプション値操作用
-if (!item.getAttribute("Set")) {      // 初期値設定
+if (!item.getAttribute("Set")) {        // 初期値設定
   await item.setAttribute("nParam", 0);
   // ... //
 }
@@ -100,21 +102,27 @@ if (window.Addon == 1) {
   AddEventEx(elm, "event", Function);
   /* ## イベント登録: まんま elm.addEventListener("event", Function, false); */
 
-  AddTypeEx("Add-ons", "CommandName", Function);
+  AddTypeEx("Add-ons", "Caption", Function);
   /* ## コマンド登録: メニュー・キー等で「タイプ:アドオン」から選択できるコマンド
     "Add-ons": 「タイプ:アドオン」として登録, Tabs, Edit など他タイプへの登録も可能
-    "CommandName": 表示名, 英名登録してローカライズが慣例ぽい
+    "Caption": 表示名, 英名登録してローカライズが慣例ぽい
     Function: 実行する関数, 引数として (Ctrl, pt) を受け取る
   */
 
-  AddEvent("Layout", async function(){ ... });
-  /* ## UI設置: ボタン・入力欄などTE上のUIパーツを設置
-    "Layout": モノによっては多少トリガーイベントの差異アリ
+  AddEvent("Layout", async function(){
+    /* ## UI設置: ボタン・入力欄などTE上のUIパーツを設置
+      "Layout": モノによっては多少トリガーイベントの差異アリ
 
-    UI設置そのものはJSによる動的DOM生成 => TE自体のDOM構造把握は必須
-    (オプションページ「位置」も "場所の名前" を設定するだけ)
-    イベント割り当てもDOMとして .AddEventListener() や onlick="..." で設定
-  */
+      UI設置そのものはJSによる動的DOM生成 => TE自体のDOM構造把握は必須
+      (オプションページ「位置」も "場所の名前" を設定するだけ)
+      イベント割り当てもDOMとして .AddEventListener() や onlick="..." で設定
+    */
+    SetAddon(Addon_Id, Default, Src);
+    /* オプション:位置 準拠で設置するための関数
+      Default: オプション:位置 で設定した位置が自動的に代入されてる？
+      Src: 設置するUIをHtmlElementとして文字列か配列で指定、配列は結果を連結した文字列として適用？
+    */
+  });
 
 } else {
   /* # オプション設定部: 主に0～4ページ用, 5～9はお任せでOK */
