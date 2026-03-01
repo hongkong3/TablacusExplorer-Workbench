@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <lang author="HongKong" en="Japanese">日本語</lang>
+  <text s="dd: Divide-UD">dd: 上下に分割</text>
+  <text s="dd: Divide-LR">dd: 左右に分割</text>
+  <text s="dd: Merge">dd: 結合</text>
+</resources>

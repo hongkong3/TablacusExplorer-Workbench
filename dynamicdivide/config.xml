@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TablacusExplorer>
+  <General>
+    <Version>0.91</Version>
+    <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
+    <MinVersion>2023.9.13</MinVersion>
+    <Options>Common:0:0</Options>
+    <Level>2</Level>
+    <Creator>HongKong3</Creator>
+    <URL>https://github.com/hongkong3/TablacusExplorer-Workbench/</URL>
+    <License>CC0 License</License>
+  </General>
+  <en>
+    <Name>Dynamic Divide</Name>
+  </en>
+  <ja>
+    <Name>動的分割</Name>
+    <Description>アクティブペインを上下/左右に分割</Description>
+  </ja>
+</TablacusExplorer>
