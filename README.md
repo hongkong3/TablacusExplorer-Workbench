@@ -10,6 +10,7 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 
 <!-- TOC/ -->
 > [!CAUTION]
+> - [動的分割](#動的分割)
 > - [ユーザー チートシート](#ユーザー-チートシート)
 > - [ユーザーインポート](#ユーザーインポート)
 > - [アイコン選択ダイアログ-改](#アイコン選択ダイアログ-改)
@@ -45,6 +46,15 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 [a-te]: https://github.com/tablacus/TablacusExplorer "tablacus/TablacusExplorer: A tabbed file manager with Add\-on support"
 [i-cc]: https://img.shields.io/static/v1?color=2ab&label=license&message=CC0
 [a-cc]: https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0Universal"
+
+### [動的分割](/dynamicdivide)
+[![x][i-te]][a-te]&nbsp;[![x][i-cc]][a-cc]&nbsp;
+[<img height="27fox" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download%20:&message=TE_dynamicdivide_v091.zip"/>
+](/../../raw/master/.releases/TE_dynamicdivide_v091.zip "TE_dynamicdivide_v091.zip をダウンロード")  
+<br/>
+既定配置ではなく、アクティブなペインを上下または左右に分割するタイプの「分割」です。  
+<br/>
+<br/>
 
 ### [ユーザー チートシート](/usercheatsheet)
 [![x][i-te]][a-te]&nbsp;[![x][i-cc]][a-cc]&nbsp;
