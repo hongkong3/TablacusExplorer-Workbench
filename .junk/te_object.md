@@ -4,7 +4,7 @@
 
 ### 構造
 
-ほぼ **COMオブジェクト**、WebView2版では `await` 等でリテラル値を実体化させないと何も出来ない。
+ほぼ **COMオブジェクト**、WebView2版では `await` 等で実体化させないと**大体使えない**。
 
 - **TE** (TEのメインウィンドウ?)  
   UIの大部分はHTMLによる構成  
@@ -23,7 +23,18 @@
   - 各アドオンのUI  
     メインウィンドウ上の HTMLElement として生成される  
 
-  - **WebBorwser**
+  - **WebBorwser**  
     ダイアログ等の別ウィンドウ  
     生成時のオプション値を `dialogArguments.***` として参照可能  
     場合によっては `MainWindow` からオブジェクトも引っ張ってくる  
+
+<table><tr><td><details><summary><strong>Ctrl</strong></summary>
+
+コマンド等での呼び出しでは引数として`Ctrl`が渡される。  
+`Ctrl.Type`の定数値で呼び出し元を判別。  
+- FV: `CTRL_SB:1`, `CTRL_FV:0`  
+- TC: `CTRL_TC:196608`, たまに`CTRL_WB:131072`など  
+- TV: `CTRL_TV:262144`  
+- TE: `CTRL_TE:65536`  
+  メニュー・ボタン等は本体経由扱い
+</details></td></tr></tr></table>
