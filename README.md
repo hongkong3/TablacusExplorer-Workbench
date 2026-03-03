@@ -52,7 +52,7 @@ Windows用のタブ型ファイラー [Tablacus Explorer](https://tablacus.githu
 [<img height="27fox" src="https://img.shields.io/static/v1?labelColor=27e&color=c23&label=Download%20:&message=TE_dynamicdivide_v091.zip"/>
 ](/../../raw/master/.releases/TE_dynamicdivide_v091.zip "TE_dynamicdivide_v091.zip をダウンロード")  
 <br/>
-既定配置ではなく、アクティブなペインを上下または左右に分割するタイプの「分割」です。  
+固定配置ではなく、アクティブなペインを上下または左右に分割していくタイプの「分割」です。  
 <br/>
 <br/>
 
