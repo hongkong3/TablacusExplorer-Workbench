@@ -2,4 +2,5 @@
 
 [_checks.js](_checks.js) ： デバッグ用関数  
 [_style.js](_style.js) ： スタイル調整用関数  
-[te_addon.md](te_addon.md) ： TEアドオン仕様覚え書き  
+[te_addon.md](te_addon.md) ： TEアドオン覚え書き  
+[te_object.md](te_object.md) : TEオブジェクト覚え書き  
