@@ -89,6 +89,8 @@ FV.Title                                     // タブ表示名
 FV.FolderItem.Path                           // FV自身のフルパス
 FV.Data.Lock                                 // ロック状態, 取得: GetLock(FV), トグル: Lock(TC, idx, true)
 
+FV.TreeView = TV                             // タブ付属のTreeView？
+
 FV.Items = nFI                               // FV内のファイル/フォルダのアイテム(FI)をCOMコレクションで取得
 FV.FocusedItem = FI                          // フォーカス中のアイテム(FI)
 FV.SelectedItems = nFI                       // 選択アイテムのCOMコレクション
