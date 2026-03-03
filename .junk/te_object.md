@@ -37,4 +37,28 @@
 - TV: `CTRL_TV:262144`  
 - TE: `CTRL_TE:65536`  
   メニュー・ボタン等は本体経由扱い
+- その他: `CTRL_WB:131072`  
+  どのアドオン(のUI)かは`pt`を`document.elementFromPoint()`に使うなどして探索
 </details></td></tr></tr></table>
+
+- - - - - - - -
+
+### TC
+~~~~js:hoge.js
+TC = await te.Ctrl(CTRL_TC, [Id]);
+nTC = await te.Ctrls(CTRL_TC, [Group]);
+nTC = await te.Ctrls(CTRL_TC, true, window.chrome);
+
+TC.Type
+TC.Id
+TC.Data.Group
+TC.Visible
+
+TC.Item(N)
+TC.Count
+TC.SelectedIndex
+TC.Selected
+
+TC.Move(srcIndex, destIndex, [destTC]);
+TC.SetOrder([idx0, idx1,...]);
+~~~~
