@@ -1,4 +1,4 @@
-## TablacusExplorer アドオン仕様覚え書き
+## TablacusExplorer アドオン 覚え書き
 - [config.xml](#configxml)  
 - [script.js](#scriptjs)  
 - [lang/ja.xml](#langjaxml)  
