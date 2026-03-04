@@ -21,11 +21,11 @@ WebView2(Blink) / IE(Trident) を切り替えてTE再起動。  `tewv32.dll`, `t
   // Type: JavaScript
   const cs=['Trident', 'WebView2(Blink)', (ui_.bit)+'bit '], cc=window.chrome ? 1 : 0
   const lb='tewv'+(ui_.bit)+'.dll', lc=[ui_.Installed+'/lib/--'+lb, ui_.Installed+'/lib/'+lb];
-  let tx='現在 '+cs[2]+cs[cc]+' 版です', fc=fso.FileExists(lc[cc]);
+  let tx='現在 '+cs[2]+cs[cc]+' 版です', fc=api.PathFileExists(lc[cc]);
 
   if(fc){tx+='\r\n'+cs[2]+cs[cc^1]+' 版に切り替えますか？'}
   if(await MessageBox(tx, TITLE, 0x24|0x100)==6){
-    await Promise.all([fso.MoveFile(lc[cc], lc[cc^1]), FinalizeUI(), te.Reload(true)]);
+    await Promise.all([api.MoveFileEx(lc[cc], lc[cc^1], 2), FinalizeUI(), te.Reload(true)]);
   }
 ~~~~
 &nbsp;
