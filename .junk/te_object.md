@@ -51,7 +51,8 @@
 ~~~~js:tc.js
 TC = te.Ctrl(CTRL_TC, [Id]);                   // アクティブor指定IDのTCを取得
 nTC = te.Ctrls(CTRL_TC);                       // 全てのTCをCOMコレクションで取得
-nTC = te.Ctrls(CTRL_TC, true, window.chrome);  // 現在のタブグループのTCをCOMコレクションで取得
+nTC = te.Ctrls(CTRL_TC, true);                 // 現在のタブグループのTCをCOMコレクションで取得
+nTC = te.Ctrls(CTRL_TC, true, window.chrome);  // 現在のタブグループのTCをSafeArrayで取得？
 
 TC.Type == CTRL_TC                             // オブジェクト定数
 TC.Id                                          // 識別用ID
