@@ -16,7 +16,7 @@
 &nbsp;
 
 #### 動作モード変更
-WebView2 / Trident(IE) を切り替えてTE再起動。  `tewv32.dll`, `tewv64.dll` が存在する事が前提。  
+WebView2(Blink) / IE(Trident) を切り替えてTE再起動。  `tewv32.dll`, `tewv64.dll` が存在する事が前提。  
 ~~~~js:oOo.js
   // Type: JavaScript
   const cs=['Trident', 'WebView2(Blink)', (ui_.bit)+'bit '], cc=window.chrome ? 1 : 0
