@@ -1,4 +1,4 @@
-## TablacusExplorer オブジェクト仕様覚え書き
+## TablacusExplorer オブジェクト 覚え書き
 
 - [構造](#構造)
 - [TC (TabControl)](#tc-tabcontrol)
