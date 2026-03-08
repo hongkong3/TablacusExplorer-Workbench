@@ -5,6 +5,21 @@
 - [FV (FolderView)](#fv-folderview)
 - [FI (FolderItem)](#fi-folderitem)
 - - - - - - - -
+~~~~js:other.js
+ui_.TEPath;         // TE??.exeのフルパス
+ui_.Installed;      // ↑のフォルダパス (\ナシ)
+ui_.hwnd;           // TE本体のhwnd
+ui_.bit;            // 実行ファイルのbit数
+
+TITLE;              // ウィンドウタイトルの「Tablacus Explorer」
+HOME_PATH;          // 新規タブのフォルダパス 「about:blank」
+
+te.Data.pt = pt;                  // 最後にマウス操作した位置？
+te.CtrlFromPoint(pt) = Ctrl;      // 指定スクリーン座標のCtrl取得
+document.elementFromPoint(px.x-screenLeft, pt.y-screenTop); // 指定位置のHTMLElement取得
+
+GetAddonElement(Addon_Id) = opt;  // アドオン毎のオプション設定操作用
+~~~~
 
 ### 構造
 
@@ -128,6 +143,16 @@ FI.ExtendedProperty("System.DateCreated")      // 作成日時の DateTimeString
 FI.ExtendedProperty("System.DateModified")     // 変更日時の DateTimeString
 FI.ExtendedProperty("System.DateAccessed")     // アクセス日時の DateTimeString
 ~~~~
-ファイル/フォルダ操作そのものは、fso.***関数で行う？
+ファイル/フォルダ操作そのものは、別途関数で行う？
+
+- - - - - - - -
+
+### other
+~~~~js:other.js
+ui_.TEPath
+ui_.Installed
+ui_.hwnd
+ui_.bit
+~~~~
 
 - - - - - - - -
